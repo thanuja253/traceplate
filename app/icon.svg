@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="TracePlate">
+  <rect width="32" height="32" fill="#1b1612"/>
+  <circle cx="16" cy="16" r="11" fill="none" stroke="#f3ead8" stroke-width="1.5"/>
+  <path d="M7 18 C11 10, 16 22, 25 12" fill="none" stroke="#9c2b1a" stroke-width="2"/>
+</svg>

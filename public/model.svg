@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 420" role="img" aria-label="TracePlate graph model">
+  <rect width="980" height="420" fill="#fbf6ec"/>
+  <style>
+    .box { fill: #f3ead8; stroke: #1b1612; stroke-width: 1.2; }
+    .t { font-family: Georgia, serif; font-size: 15px; fill: #1b1612; }
+    .s { font-family: ui-monospace, monospace; font-size: 10px; fill: #6d5f4e; }
+    .e { font-family: ui-monospace, monospace; font-size: 10px; fill: #9c2b1a; letter-spacing: 0.06em; }
+  </style>
+  <rect class="box" x="40" y="40" width="150" height="58" rx="2"/>
+  <text class="t" x="55" y="65">Recall</text>
+  <text class="s" x="55" y="84">contaminant, date</text>
+
+  <rect class="box" x="40" y="160" width="150" height="58" rx="2"/>
+  <text class="t" x="55" y="185">Farm</text>
+  <text class="s" x="55" y="204">region, produce</text>
+
+  <rect class="box" x="280" y="160" width="150" height="58" rx="2"/>
+  <text class="t" x="295" y="185">Processor</text>
+  <text class="s" x="295" y="204">city, kind</text>
+
+  <rect class="box" x="520" y="160" width="150" height="58" rx="2"/>
+  <text class="t" x="535" y="185">Distributor</text>
+  <text class="s" x="535" y="204">hub, region</text>
+
+  <rect class="box" x="760" y="160" width="160" height="58" rx="2"/>
+  <text class="t" x="775" y="185">Restaurant</text>
+  <text class="s" x="775" y="204">city, cuisine</text>
+
+  <rect class="box" x="280" y="300" width="150" height="58" rx="2"/>
+  <text class="t" x="295" y="325">Ingredient</text>
+  <text class="s" x="295" y="344">category</text>
+
+  <rect class="box" x="760" y="300" width="160" height="58" rx="2"/>
+  <text class="t" x="775" y="325">Dish</text>
+  <text class="s" x="775" y="344">course</text>
+
+  <rect class="box" x="760" y="40" width="160" height="58" rx="2"/>
+  <text class="t" x="775" y="65">City</text>
+  <text class="s" x="775" y="84">state</text>
+
+  <path d="M115 98 V160" stroke="#1b1612" fill="none"/>
+  <text class="e" x="122" y="136">FLAGS</text>
+
+  <path d="M190 189 H280" stroke="#1b1612" fill="none"/>
+  <text class="e" x="205" y="180">SUPPLIES</text>
+
+  <path d="M430 189 H520" stroke="#1b1612" fill="none"/>
+  <text class="e" x="445" y="180">SHIPS_TO</text>
+
+  <path d="M670 189 H760" stroke="#1b1612" fill="none"/>
+  <text class="e" x="680" y="180">DELIVERS_TO</text>
+
+  <path d="M115 218 V329 H280" stroke="#1b1612" fill="none"/>
+  <text class="e" x="130" y="280">GROWS</text>
+
+  <path d="M355 218 V300" stroke="#1b1612" fill="none"/>
+  <text class="e" x="362" y="268">PACKS</text>
+
+  <path d="M840 218 V300" stroke="#1b1612" fill="none"/>
+  <text class="e" x="848" y="268">SERVES</text>
+
+  <path d="M760 329 H430" stroke="#1b1612" fill="none"/>
+  <text class="e" x="540" y="348">CONTAINS</text>
+
+  <path d="M840 160 V98" stroke="#1b1612" fill="none"/>
+  <text class="e" x="848" y="136">LOCATED_IN</text>
+</svg>
