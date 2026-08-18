@@ -1,17 +1,21 @@
 # TracePlate
 
-A food-supply **outbreak tracer**. When a farm or packer is flagged in a recall, TracePlate walks the graph — farm → packer → distributor → restaurant — and shows every kitchen and dish that could have received the lot.
-
-The demo graph is **Indian food**: palak, paneer, prawns and chicken, moving through Mumbai, Delhi, Bengaluru, Hyderabad, Kolkata, Chennai, Pune and Kochi.
+Live demo: https://wexa-xi.vercel.app  
+Screen recording: https://drive.google.com/file/d/1fqN1hqmn3Xih1PVj6adgx4hP27O4Hxm-/view
 
 Built for the Wexa AI take-home: **CognoDB Cloud** as the database, **openCypher** over **Bolt**, official **Neo4j JavaScript driver**, Next.js for the UI.
 
-Live demo: https://wexa-xi.vercel.app  
-Screen recording: _add a link (Loom, GitHub, or the `docs/` folder)._
+---
+
+## Use Case
+
+TracePlate is a food-supply **outbreak tracer**. When a farm or packer is flagged in a recall, it walks the graph — farm → packer → distributor → restaurant — and shows every kitchen and dish that could have received the lot.
+
+The demo graph is **Indian food**: palak, paneer, prawns and chicken, moving through Mumbai, Delhi, Bengaluru, Hyderabad, Kolkata, Chennai, Pune and Kochi.
 
 ---
 
-## Why a graph database?
+## Why a Graph Database?
 
 A food recall is not a row. It is a path.
 
@@ -33,7 +37,7 @@ Variable-length traversal, mixed node types on one path, and ancestor intersecti
 
 ---
 
-## Data model
+## Data Model Diagram
 
 ![TracePlate graph model](public/model.svg)
 
@@ -74,7 +78,7 @@ A good pair for **Shared supplier**: Cafe Madras (Mumbai) and Indian Accent (Del
 
 ---
 
-## Main queries
+## Main Queries Explained
 
 All Cypher is in [`lib/cypher.ts`](lib/cypher.ts). Every call is **parameterised** (`$id`, `$q`, `$idA`, `$idB`) via `driver.executeQuery` — no string concatenation.
 
@@ -106,9 +110,7 @@ If CognoDB is down, pages render a readable error instead of crashing; `/api/hea
 
 ---
 
-## Setup
-
-### 1. Create a CognoDB instance
+## How to Create a CognoDB Instance
 
 1. Sign up at [https://console.cognodb.com/signup](https://console.cognodb.com/signup) (free tier, no credit card).
 2. Create a free **c0** instance and pick a region. It provisions in under a minute.
@@ -116,7 +118,7 @@ If CognoDB is down, pages render a readable error instead of crashing; `/api/hea
 
 If TLS verification fails against CognoDB’s certificate, switch the scheme to `bolt+ssc://`.
 
-### 2. Run the app
+## Setup / Run Instructions
 
 ```bash
 cp .env.example .env.local
@@ -131,7 +133,7 @@ Open [http://localhost:3000](http://localhost:3000).
 
 Seed is safe to re-run: it deletes the previous graph, then `MERGE`s this dataset.
 
-### 3. Hosted demo (Vercel)
+### Hosted demo (Vercel)
 
 The graph lives in CognoDB, not on the app host. Seed once against your instance, then deploy the Next.js app with the same env vars.
 
@@ -167,7 +169,11 @@ Cafe Madras (Mumbai) and Indian Accent (Delhi) share Doaba Palak Farms, Nashik G
 
 ---
 
-## Screen recording script (~90 seconds)
+## Screen Recording
+
+https://drive.google.com/file/d/1fqN1hqmn3Xih1PVj6adgx4hP27O4Hxm-/view
+
+Walkthrough (~90 seconds):
 
 1. Home: three open recalls, counts from the live graph.
 2. Open **Palak — E. coli**. Show the farm → packer → restaurant map.
